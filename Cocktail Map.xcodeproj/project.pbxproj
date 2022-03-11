@@ -15,7 +15,7 @@
 		BDD2A62527D91CE30020F699 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD2A62327D91CE30020F699 /* LaunchScreen.storyboard */; };
 		BDD2A62D27D91D390020F699 /* Network Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD2A62C27D91D390020F699 /* Network Manager.swift */; };
 		BDD2A62F27D91EB70020F699 /* CocktailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD2A62E27D91EB70020F699 /* CocktailData.swift */; };
-		BDD2A63127D91FCA0020F699 /* AlcoCocktailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD2A63027D91FCA0020F699 /* AlcoCocktailsTableViewController.swift */; };
+		BDD2A63127D91FCA0020F699 /* AlcoholCocktailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD2A63027D91FCA0020F699 /* AlcoholCocktailsTableViewController.swift */; };
 		BDD2A63327D9258B0020F699 /* CocktailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD2A63227D9258B0020F699 /* CocktailTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +30,7 @@
 		BDD2A62627D91CE30020F699 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDD2A62C27D91D390020F699 /* Network Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network Manager.swift"; sourceTree = "<group>"; };
 		BDD2A62E27D91EB70020F699 /* CocktailData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailData.swift; sourceTree = "<group>"; };
-		BDD2A63027D91FCA0020F699 /* AlcoCocktailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoCocktailsTableViewController.swift; sourceTree = "<group>"; };
+		BDD2A63027D91FCA0020F699 /* AlcoholCocktailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoholCocktailsTableViewController.swift; sourceTree = "<group>"; };
 		BDD2A63227D9258B0020F699 /* CocktailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -45,6 +45,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD96086927DB897900F700F0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BDD2A62C27D91D390020F699 /* Network Manager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		BD96086A27DB898900F700F0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BDD2A63227D9258B0020F699 /* CocktailTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BD96086B27DB898F00F700F0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BDD2A62E27D91EB70020F699 /* CocktailData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BD96086C27DB899A00F700F0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BDD2A63027D91FCA0020F699 /* AlcoholCocktailsTableViewController.swift */,
+				BD50843727DB7B95006E7126 /* DrinkDescriprionViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BD96086D27DB89A700F700F0 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BDD2A61E27D91CE20020F699 /* Main.storyboard */,
+				BDD2A62327D91CE30020F699 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		BD96086E27DB89B200F700F0 /* SupportingFIles */ = {
+			isa = PBXGroup;
+			children = (
+				BDD2A61827D91CE10020F699 /* AppDelegate.swift */,
+				BDD2A61A27D91CE20020F699 /* SceneDelegate.swift */,
+				BDD2A62627D91CE30020F699 /* Info.plist */,
+			);
+			path = SupportingFIles;
+			sourceTree = "<group>";
+		};
+		BD96086F27DB89CB00F700F0 /* Sourse */ = {
+			isa = PBXGroup;
+			children = (
+				BDD2A62127D91CE30020F699 /* Assets.xcassets */,
+			);
+			path = Sourse;
+			sourceTree = "<group>";
+		};
 		BDD2A60C27D91CE10020F699 = {
 			isa = PBXGroup;
 			children = (
@@ -64,17 +124,13 @@
 		BDD2A61727D91CE10020F699 /* Cocktail Map */ = {
 			isa = PBXGroup;
 			children = (
-				BDD2A61827D91CE10020F699 /* AppDelegate.swift */,
-				BDD2A61A27D91CE20020F699 /* SceneDelegate.swift */,
-				BDD2A61E27D91CE20020F699 /* Main.storyboard */,
-				BDD2A63027D91FCA0020F699 /* AlcoCocktailsTableViewController.swift */,
-				BD50843727DB7B95006E7126 /* DrinkDescriprionViewController.swift */,
-				BDD2A62C27D91D390020F699 /* Network Manager.swift */,
-				BDD2A63227D9258B0020F699 /* CocktailTableViewCell.swift */,
-				BDD2A62E27D91EB70020F699 /* CocktailData.swift */,
-				BDD2A62127D91CE30020F699 /* Assets.xcassets */,
-				BDD2A62327D91CE30020F699 /* LaunchScreen.storyboard */,
-				BDD2A62627D91CE30020F699 /* Info.plist */,
+				BD96086C27DB899A00F700F0 /* ViewControllers */,
+				BD96086D27DB89A700F700F0 /* Storyboards */,
+				BD96086927DB897900F700F0 /* Services */,
+				BD96086A27DB898900F700F0 /* Views */,
+				BD96086B27DB898F00F700F0 /* Models */,
+				BD96086E27DB89B200F700F0 /* SupportingFIles */,
+				BD96086F27DB89CB00F700F0 /* Sourse */,
 			);
 			path = "Cocktail Map";
 			sourceTree = "<group>";
@@ -154,7 +210,7 @@
 				BDD2A62F27D91EB70020F699 /* CocktailData.swift in Sources */,
 				BDD2A61B27D91CE20020F699 /* SceneDelegate.swift in Sources */,
 				BDD2A63327D9258B0020F699 /* CocktailTableViewCell.swift in Sources */,
-				BDD2A63127D91FCA0020F699 /* AlcoCocktailsTableViewController.swift in Sources */,
+				BDD2A63127D91FCA0020F699 /* AlcoholCocktailsTableViewController.swift in Sources */,
 				BDD2A62D27D91D390020F699 /* Network Manager.swift in Sources */,
 				BD50843827DB7B95006E7126 /* DrinkDescriprionViewController.swift in Sources */,
 			);
@@ -307,7 +363,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N2N5N7MK77;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Cocktail Map/Info.plist";
+				INFOPLIST_FILE = "Cocktail Map/SupportingFiles/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -335,7 +391,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N2N5N7MK77;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Cocktail Map/Info.plist";
+				INFOPLIST_FILE = "Cocktail Map/SupportingFiles/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
