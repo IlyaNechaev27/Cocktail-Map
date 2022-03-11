@@ -8,7 +8,12 @@
 import UIKit
 
 class CocktailTableViewCell: UITableViewCell {
-    @IBOutlet weak var cocktailImage: UIImageView!
+    @IBOutlet weak var cocktailImage: UIImageView! {
+        didSet {
+            cocktailImage.contentMode = .scaleAspectFit
+            cocktailImage.layer.cornerRadius = cocktailImage.frame.height / 2
+        }
+    }
     @IBOutlet weak var cocktailNameLabel: UILabel!
     
     override func awakeFromNib() {

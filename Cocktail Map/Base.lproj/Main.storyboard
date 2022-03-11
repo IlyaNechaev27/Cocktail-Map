@@ -3,16 +3,17 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Alcoholic Drinks-->
+        <!--Alco-->
         <scene sceneID="4dZ-dn-NVD">
             <objects>
-                <tableViewController id="L9m-hO-q3t" customClass="CocktailsTableViewController" customModule="Cocktail_Map" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="L9m-hO-q3t" customClass="AlcoCocktailsTableViewController" customModule="Cocktail_Map" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="xOb-L6-YBx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -31,12 +32,13 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERi-WM-L9N">
-                                            <rect key="frame" x="76" y="21" width="308" height="25.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                            <nil key="textColor"/>
+                                            <rect key="frame" x="76" y="21" width="308" height="22"/>
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                            <color key="textColor" systemColor="systemBackgroundColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstItem="Pfj-kg-Te0" firstAttribute="top" secondItem="Z0M-gx-gpx" secondAttribute="top" constant="10" id="3aZ-0m-OSh"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="ERi-WM-L9N" secondAttribute="trailing" constant="10" id="7hF-Sl-Dl2"/>
@@ -57,32 +59,81 @@
                             <outlet property="delegate" destination="L9m-hO-q3t" id="3sc-Wr-JOP"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Alcoholic Drinks" id="1bw-WF-SW5"/>
+                    <tabBarItem key="tabBarItem" title="Alcoholic" image="hare.fill" catalog="system" id="cLq-ez-pAe"/>
+                    <navigationItem key="navigationItem" title="Alco" id="1bw-WF-SW5"/>
+                    <connections>
+                        <segue destination="nsU-c1-N5r" kind="show" identifier="DrinkDescriprion" id="2c8-ID-AL1"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ABR-s6-0vY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-110.14492753623189" y="65.625"/>
+            <point key="canvasLocation" x="42" y="-421"/>
+        </scene>
+        <!--Cocktails-->
+        <scene sceneID="ik8-MI-tQT">
+            <objects>
+                <tabBarController id="NFS-uc-pIv" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Cocktails" id="x18-Yf-PhY"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="oDU-Vb-kUl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" systemColor="systemPinkColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="L9m-hO-q3t" kind="relationship" relationship="viewControllers" id="pAp-9J-Xqt"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FeU-Fl-e5b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-962" y="-298"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="icD-Ml-HkY">
             <objects>
                 <navigationController id="Yxp-yy-jAa" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="E08-gc-6O6">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" largeTitles="YES" id="E08-gc-6O6">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" systemColor="systemPinkColor"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="L9m-hO-q3t" kind="relationship" relationship="rootViewController" id="zbK-Jv-jgy"/>
+                        <segue destination="NFS-uc-pIv" kind="relationship" relationship="rootViewController" id="Rvu-GW-7lm"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ABs-m7-HVf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1000" y="66"/>
+            <point key="canvasLocation" x="-2039" y="-298"/>
+        </scene>
+        <!--Drink Descriprion View Controller-->
+        <scene sceneID="jJE-u7-ekk">
+            <objects>
+                <viewController id="nsU-c1-N5r" customClass="DrinkDescriprionViewController" customModule="Cocktail_Map" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6vo-R4-Af2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Ffo-hL-zia"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rlL-LK-1QF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5IN-mJ-bTR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1155" y="-421"/>
         </scene>
     </scenes>
     <resources>
+        <image name="hare.fill" catalog="system" width="128" height="91"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -7,13 +7,10 @@
 
 import Foundation
 
-enum Link: String {
-    case cocktails = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic"
-}
-
 enum NetworkError: Error {
     case invalidURL, noData, decodingError
 }
+
 class NetworkManager {
     static let shared = NetworkManager()
     
@@ -26,11 +23,12 @@ class NetworkManager {
             return
         }
         
-        URLSession.shared.dataTask(with: url) { data, _, error in
-            guard let data = data else {
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard let data = data, let response = response else {
                 completion(.failure(.noData))
                 return
             }
+            print(response)
             
             do {
                 let result = try JSONDecoder().decode(T.self, from: data)

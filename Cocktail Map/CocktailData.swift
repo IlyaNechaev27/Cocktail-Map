@@ -15,4 +15,7 @@ struct Drink: Decodable {
     let strDrink: String?
     let strDrinkThumb: String?
     let idDrink: String?
+    let strAlcoholic: String?
+    let strGlass: String?
+    let strInstructions: String?
 }

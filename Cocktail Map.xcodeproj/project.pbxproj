@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD50843827DB7B95006E7126 /* DrinkDescriprionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD50843727DB7B95006E7126 /* DrinkDescriprionViewController.swift */; };
 		BDD2A61927D91CE10020F699 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD2A61827D91CE10020F699 /* AppDelegate.swift */; };
 		BDD2A61B27D91CE20020F699 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD2A61A27D91CE20020F699 /* SceneDelegate.swift */; };
 		BDD2A62027D91CE20020F699 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD2A61E27D91CE20020F699 /* Main.storyboard */; };
@@ -14,11 +15,12 @@
 		BDD2A62527D91CE30020F699 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD2A62327D91CE30020F699 /* LaunchScreen.storyboard */; };
 		BDD2A62D27D91D390020F699 /* Network Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD2A62C27D91D390020F699 /* Network Manager.swift */; };
 		BDD2A62F27D91EB70020F699 /* CocktailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD2A62E27D91EB70020F699 /* CocktailData.swift */; };
-		BDD2A63127D91FCA0020F699 /* CocktailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD2A63027D91FCA0020F699 /* CocktailsTableViewController.swift */; };
+		BDD2A63127D91FCA0020F699 /* AlcoCocktailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD2A63027D91FCA0020F699 /* AlcoCocktailsTableViewController.swift */; };
 		BDD2A63327D9258B0020F699 /* CocktailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD2A63227D9258B0020F699 /* CocktailTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD50843727DB7B95006E7126 /* DrinkDescriprionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDescriprionViewController.swift; sourceTree = "<group>"; };
 		BDD2A61527D91CE10020F699 /* Cocktail Map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cocktail Map.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD2A61827D91CE10020F699 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDD2A61A27D91CE20020F699 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,7 +30,7 @@
 		BDD2A62627D91CE30020F699 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDD2A62C27D91D390020F699 /* Network Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network Manager.swift"; sourceTree = "<group>"; };
 		BDD2A62E27D91EB70020F699 /* CocktailData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailData.swift; sourceTree = "<group>"; };
-		BDD2A63027D91FCA0020F699 /* CocktailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailsTableViewController.swift; sourceTree = "<group>"; };
+		BDD2A63027D91FCA0020F699 /* AlcoCocktailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoCocktailsTableViewController.swift; sourceTree = "<group>"; };
 		BDD2A63227D9258B0020F699 /* CocktailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,7 +67,8 @@
 				BDD2A61827D91CE10020F699 /* AppDelegate.swift */,
 				BDD2A61A27D91CE20020F699 /* SceneDelegate.swift */,
 				BDD2A61E27D91CE20020F699 /* Main.storyboard */,
-				BDD2A63027D91FCA0020F699 /* CocktailsTableViewController.swift */,
+				BDD2A63027D91FCA0020F699 /* AlcoCocktailsTableViewController.swift */,
+				BD50843727DB7B95006E7126 /* DrinkDescriprionViewController.swift */,
 				BDD2A62C27D91D390020F699 /* Network Manager.swift */,
 				BDD2A63227D9258B0020F699 /* CocktailTableViewCell.swift */,
 				BDD2A62E27D91EB70020F699 /* CocktailData.swift */,
@@ -151,8 +154,9 @@
 				BDD2A62F27D91EB70020F699 /* CocktailData.swift in Sources */,
 				BDD2A61B27D91CE20020F699 /* SceneDelegate.swift in Sources */,
 				BDD2A63327D9258B0020F699 /* CocktailTableViewCell.swift in Sources */,
-				BDD2A63127D91FCA0020F699 /* CocktailsTableViewController.swift in Sources */,
+				BDD2A63127D91FCA0020F699 /* AlcoCocktailsTableViewController.swift in Sources */,
 				BDD2A62D27D91D390020F699 /* Network Manager.swift in Sources */,
+				BD50843827DB7B95006E7126 /* DrinkDescriprionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

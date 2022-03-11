@@ -7,12 +7,15 @@
 
 import UIKit
 
-class CocktailsTableViewController: UITableViewController {
+class AlcoCocktailsTableViewController: UITableViewController {
+    
+    private let alcoholURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic"
+    
     var cocktails: [Drink] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NetworkManager.shared.fetchData(for: CocktailData.self, from: Link.cocktails.rawValue) { result in
+        NetworkManager.shared.fetchData(for: CocktailData.self, from: alcoholURL) { result in
             switch result {
             case .success(let cocktails):
                 self.cocktails = cocktails.drinks ?? []
@@ -30,11 +33,21 @@ class CocktailsTableViewController: UITableViewController {
         cocktails.count
     }
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let idDrink = cocktails[indexPath.row].idDrink
+        performSegue(withIdentifier: "DrinkDescriprion", sender: idDrink)
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cocktail", for: indexPath) as! CocktailTableViewCell
         cell.configure(with: cocktails[indexPath.row])
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let drinkDescriprion = segue.destination as! DrinkDescriprionViewController
+        
+        drinkDescriprion.idDrink = sender as! String
     }
     
 
