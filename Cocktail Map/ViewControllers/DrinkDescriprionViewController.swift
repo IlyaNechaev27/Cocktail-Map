@@ -15,6 +15,7 @@ class DrinkDescriprionViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var indicatorView: UIActivityIndicatorView!
     @IBOutlet weak var alcoholLabel: UILabel!
     @IBOutlet weak var glassLabel: UILabel!
     @IBOutlet weak var instructionLabel: UILabel!
@@ -30,9 +31,12 @@ class DrinkDescriprionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        indicatorView.startAnimating()
+        indicatorView.hidesWhenStopped = true
+        
         navigationItem.backBarButtonItem?.tintColor = .white
         fetchData()
-        
+    
        
     }
 
@@ -42,6 +46,7 @@ class DrinkDescriprionViewController: UIViewController {
             case .success(let drink):
                 self.drink = drink.drinks?.first
                 self.setupVC()
+                self.indicatorView.stopAnimating()
             case .failure(let error):
                 print(error)
             }

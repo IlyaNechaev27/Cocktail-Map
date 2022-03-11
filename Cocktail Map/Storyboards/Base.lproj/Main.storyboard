@@ -17,24 +17,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cocktail" rowHeight="72" id="bRl-7r-aFw" customClass="CocktailTableViewCell" customModule="Cocktail_Map" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="72"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cocktail" rowHeight="70" id="bRl-7r-aFw" customClass="CocktailTableViewCell" customModule="Cocktail_Map" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bRl-7r-aFw" id="Z0M-gx-gpx">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pfj-kg-Te0">
-                                            <rect key="frame" x="16" y="10" width="50" height="52"/>
+                                            <rect key="frame" x="16" y="10" width="50" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="50" id="Eqa-UC-GNX"/>
                                                 <constraint firstAttribute="height" constant="50" id="ZcT-SA-S5b"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERi-WM-L9N">
-                                            <rect key="frame" x="76" y="21" width="308" height="23"/>
-                                            <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="20"/>
-                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <rect key="frame" x="76" y="21" width="308" height="30"/>
+                                            <fontDescription key="fontDescription" name="Cochin-Bold" family="Cochin" pointSize="26"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -48,6 +48,8 @@
                                         <constraint firstItem="Pfj-kg-Te0" firstAttribute="leading" secondItem="Z0M-gx-gpx" secondAttribute="leading" constant="16" id="YpC-RB-ZcD"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="cocktailImage" destination="Pfj-kg-Te0" id="oZM-ag-t7J"/>
                                     <outlet property="cocktailNameLabel" destination="ERi-WM-L9N" id="MW7-Jd-0zu"/>
@@ -114,17 +116,22 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="fbH-Kt-iAI">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ffo-hL-zia"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Ffo-hL-zia" firstAttribute="trailing" secondItem="Sf7-bd-1Vh" secondAttribute="trailing" constant="20" id="2EH-ih-TvI"/>
                             <constraint firstItem="Ffo-hL-zia" firstAttribute="trailing" secondItem="FMg-8e-hH1" secondAttribute="trailing" constant="20" id="3Ft-21-03d"/>
+                            <constraint firstItem="fbH-Kt-iAI" firstAttribute="centerX" secondItem="6vo-R4-Af2" secondAttribute="centerX" id="49M-5s-2hj"/>
                             <constraint firstItem="Sf7-bd-1Vh" firstAttribute="top" secondItem="Yfj-Yt-3Hh" secondAttribute="bottom" constant="8" symbolic="YES" id="4f1-Js-7EF"/>
                             <constraint firstItem="FMg-8e-hH1" firstAttribute="top" secondItem="XTd-gI-cGu" secondAttribute="bottom" constant="40" id="E46-oV-9ub"/>
                             <constraint firstItem="VvY-FX-46k" firstAttribute="trailing" secondItem="Ffo-hL-zia" secondAttribute="trailing" id="SCb-F7-KvE"/>
                             <constraint firstItem="Ffo-hL-zia" firstAttribute="trailing" secondItem="XTd-gI-cGu" secondAttribute="trailing" constant="20" id="XUd-Ot-Bv8"/>
                             <constraint firstItem="XTd-gI-cGu" firstAttribute="leading" secondItem="Ffo-hL-zia" secondAttribute="leading" constant="20" id="ZfK-gT-GDf"/>
+                            <constraint firstItem="fbH-Kt-iAI" firstAttribute="centerY" secondItem="6vo-R4-Af2" secondAttribute="centerY" id="cVy-62-W29"/>
                             <constraint firstItem="VvY-FX-46k" firstAttribute="leading" secondItem="Ffo-hL-zia" secondAttribute="leading" id="d4b-gz-gik"/>
                             <constraint firstItem="FMg-8e-hH1" firstAttribute="leading" secondItem="Ffo-hL-zia" secondAttribute="leading" constant="20" id="eCS-7P-ezS"/>
                             <constraint firstItem="VvY-FX-46k" firstAttribute="top" secondItem="6vo-R4-Af2" secondAttribute="top" id="rdl-xt-d9J"/>
@@ -138,6 +145,7 @@
                         <outlet property="alcoholLabel" destination="KaT-d5-jgt" id="x87-L0-2hL"/>
                         <outlet property="drinkImage" destination="XTd-gI-cGu" id="Ob2-IJ-b71"/>
                         <outlet property="glassLabel" destination="h0e-Hj-W7b" id="KQE-mg-fGg"/>
+                        <outlet property="indicatorView" destination="fbH-Kt-iAI" id="hJX-cf-q3m"/>
                         <outlet property="instructionLabel" destination="Sf7-bd-1Vh" id="RM6-XU-hoV"/>
                     </connections>
                 </viewController>
