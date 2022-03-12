@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 
 enum NetworkError: Error {
     case invalidURL, noData, decodingError
@@ -49,4 +50,11 @@ class NetworkManager {
             
         return try? Data(contentsOf: imageURL)
     }
+}
+
+class AlamofireNetworkManager {
+    static let shared = AlamofireNetworkManager()
+    
+    private init() {}
+    
 }

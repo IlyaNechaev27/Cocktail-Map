@@ -8,16 +8,24 @@
 import UIKit
 
 class CocktailTableViewCell: UITableViewCell {
+ 
+    
+    
     @IBOutlet weak var cocktailImage: UIImageView! {
         didSet {
             cocktailImage.contentMode = .scaleAspectFit
             cocktailImage.layer.cornerRadius = cocktailImage.frame.height / 2
         }
     }
+    
     @IBOutlet weak var cocktailNameLabel: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.startAnimating()
     }
 
     func configure(with cocktail: Drink) {
@@ -28,6 +36,7 @@ class CocktailTableViewCell: UITableViewCell {
             
             DispatchQueue.main.async {
                 self.cocktailImage.image = UIImage(data: imageData)
+                self.activityIndicator.stopAnimating()
             }
         }
     }

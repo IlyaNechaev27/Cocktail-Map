@@ -15,7 +15,6 @@ class AlcoholCocktailsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigationBar()
         fetchData()
     }
 
@@ -31,7 +30,6 @@ class AlcoholCocktailsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cocktail", for: indexPath) as! CocktailTableViewCell
         cell.configure(with: cocktails[indexPath.row])
-        cell.contentView.backgroundColor = UIColor.clear
         
         return cell
     }
@@ -40,25 +38,6 @@ class AlcoholCocktailsTableViewController: UITableViewController {
         let drinkDescriprion = segue.destination as! DrinkDescriprionViewController
         
         drinkDescriprion.idDrink = sender as! String
-    }
-    
-    private func setupNavigationBar() {
-        title = "Alcoholic Cocktails"
-        navigationController?.navigationBar.prefersLargeTitles = true
-        
-        let imageView =  UIImageView(image: UIImage(named: "foregroundImage"))
-        imageView.contentMode = UIView.ContentMode.scaleAspectFill
-    
-        tableView.backgroundView = imageView
-        tableView.backgroundColor = UIColor.clear
-        
-        let navBarAppearance = UINavigationBarAppearance()
-        navBarAppearance.backgroundColor = .black
-        navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-        navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-        
-        navigationController?.navigationBar.standardAppearance = navBarAppearance
-        navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
     }
     
     private func fetchData() {
