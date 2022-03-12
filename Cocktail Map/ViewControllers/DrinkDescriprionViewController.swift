@@ -32,10 +32,8 @@ class DrinkDescriprionViewController: UIViewController {
         super.viewDidLoad()
         indicatorView.startAnimating()
         indicatorView.hidesWhenStopped = true
-        
+
         fetchData()
-    
-       
     }
 
     private func fetchData() {

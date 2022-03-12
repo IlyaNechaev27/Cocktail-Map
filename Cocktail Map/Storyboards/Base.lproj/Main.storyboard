@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -67,12 +68,51 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Drinks" id="vrI-Qj-KQG"/>
                     <connections>
-                        <segue destination="nsU-c1-N5r" kind="show" identifier="DrinkDescriprion" id="6EF-2L-sKo"/>
+                        <segue destination="nsU-c1-N5r" kind="show" identifier="AlcoDescription" id="6EF-2L-sKo"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OyM-gS-va1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7752.1739130434789" y="-631.47321428571422"/>
+        </scene>
+        <!--Drinks-->
+        <scene sceneID="84a-zJ-5d8">
+            <objects>
+                <collectionViewController id="5wu-Rw-g96" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Yiv-tN-xdO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="10K-6d-aW5">
+                            <size key="itemSize" width="415" height="667"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cockteil" id="uvd-kL-Xqd">
+                                <rect key="frame" x="0.0" y="29" width="415" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="YD3-6i-TG1">
+                                    <rect key="frame" x="0.0" y="0.0" width="415" height="667"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="415" height="667"/>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="5wu-Rw-g96" id="zXv-z3-iww"/>
+                            <outlet property="delegate" destination="5wu-Rw-g96" id="fkr-5c-jea"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Drinks" id="IV1-XN-Ag0"/>
+                    <connections>
+                        <segue destination="nsU-c1-N5r" kind="show" identifier="NoAlcoDescription" id="uoD-c1-dZ3"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tk4-eF-D08" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7750.7246376811599" y="65.625"/>
         </scene>
         <!--Drink Descriprion View Controller-->
         <scene sceneID="jJE-u7-ekk">
@@ -155,7 +195,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5IN-mJ-bTR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8974" y="-631"/>
+            <point key="canvasLocation" x="9007" y="-288"/>
         </scene>
         <!--Alcoholic-->
         <scene sceneID="Ejq-Op-KZX">
@@ -202,17 +242,49 @@
                     </tabBar>
                     <connections>
                         <segue destination="6WT-Bv-yLt" kind="relationship" relationship="viewControllers" id="eSv-q6-Ucr"/>
+                        <segue destination="3Uw-db-uIC" kind="relationship" relationship="viewControllers" id="WgJ-rc-wNW"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GEz-fO-3et" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5854" y="-237"/>
         </scene>
+        <!--No Alcoholic-->
+        <scene sceneID="YbH-A5-1Cp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3Uw-db-uIC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="No Alcoholic" image="tortoise.fill" catalog="system" id="zMW-1c-F6S"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" largeTitles="YES" id="ySY-Bg-grl">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5wu-Rw-g96" kind="relationship" relationship="rootViewController" id="jBX-O7-SYx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b7F-ug-qsU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6842" y="66"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="uoD-c1-dZ3"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="flame.fill" catalog="system" width="108" height="128"/>
         <image name="foregroundImage" width="4373" height="4308"/>
+        <image name="tortoise.fill" catalog="system" width="128" height="66"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

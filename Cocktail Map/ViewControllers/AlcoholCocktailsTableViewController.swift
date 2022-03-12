@@ -24,7 +24,7 @@ class AlcoholCocktailsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let idDrink = cocktails[indexPath.row].idDrink
-        performSegue(withIdentifier: "DrinkDescriprion", sender: idDrink)
+        performSegue(withIdentifier: "AlcoDescription", sender: idDrink)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
