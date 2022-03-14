@@ -24,19 +24,15 @@ class DrinkDescriprionViewController: UIViewController {
         "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=\(idDrink)"
     }
     
-    private var drink: Drink?
+    private var drink: Drink!
     
     var idDrink: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        indicatorView.startAnimating()
-        indicatorView.hidesWhenStopped = true
-
-        fetchData()
     }
 
-    private func fetchData() {
+    func fetchData() {
         NetworkManager.shared.fetchData(for: CocktailData.self, from: descriptionURL) { result in
             switch result {
             case .success(let drink):
@@ -49,6 +45,8 @@ class DrinkDescriprionViewController: UIViewController {
     }
     
     private func setupVC() {
+        indicatorView.startAnimating()
+        indicatorView.hidesWhenStopped = true
         title = drink?.strDrink
         alcoholLabel.text = "\(drink?.strAlcoholic ?? "") cocktail"
         glassLabel.text = "Served in \(drink?.strGlass ?? "")"

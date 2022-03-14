@@ -38,6 +38,7 @@ class AlcoholCocktailsTableViewController: UITableViewController {
         let drinkDescriprion = segue.destination as! DrinkDescriprionViewController
         
         drinkDescriprion.idDrink = sender as! String
+        drinkDescriprion.fetchData()
     }
     
     private func fetchData() {
@@ -51,4 +52,7 @@ class AlcoholCocktailsTableViewController: UITableViewController {
             }
         }
     }
+    
+    // MARK: - Navigation
+   
 }

@@ -9,8 +9,6 @@ import UIKit
 
 class CocktailTableViewCell: UITableViewCell {
  
-    
-    
     @IBOutlet weak var cocktailImage: UIImageView! {
         didSet {
             cocktailImage.contentMode = .scaleAspectFit
