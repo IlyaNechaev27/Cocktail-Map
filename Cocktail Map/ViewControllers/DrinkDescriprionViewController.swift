@@ -49,6 +49,14 @@ class DrinkDescriprionViewController: UIViewController {
         }
     }
     
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let ingredientsVC = segue.destination as! IngredientsViewController
+        
+        ingredientsVC.drink = drink
+    }
+    
     // MARK: - Network Manager Methods
     
     public func fetchDataWithURLSession() {
