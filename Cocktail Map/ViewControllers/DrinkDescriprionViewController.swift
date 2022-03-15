@@ -8,40 +8,27 @@
 import UIKit
 
 class DrinkDescriprionViewController: UIViewController {
-    
-    @IBOutlet weak var drinkImage: UIImageView! {
+    @IBOutlet var drinkImage: UIImageView! {
         didSet {
             drinkImage.layer.cornerRadius = drinkImage.frame.width / 2
         }
     }
-    
-    @IBOutlet weak var indicatorView: UIActivityIndicatorView!
-    @IBOutlet weak var alcoholLabel: UILabel!
-    @IBOutlet weak var glassLabel: UILabel!
-    @IBOutlet weak var instructionLabel: UILabel!
+
+    @IBOutlet var indicatorView: UIActivityIndicatorView!
+    @IBOutlet var alcoholLabel: UILabel!
+    @IBOutlet var glassLabel: UILabel!
+    @IBOutlet var instructionLabel: UILabel!
     
     private var descriptionURL: String {
         "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=\(idDrink)"
     }
     
-    private var drink: Drink!
+    public var idDrink: String = ""
     
-    var idDrink: String = ""
+    private var drink: Drink!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-
-    func fetchData() {
-        NetworkManager.shared.fetchData(for: CocktailData.self, from: descriptionURL) { result in
-            switch result {
-            case .success(let drink):
-                self.drink = drink.drinks?.first
-                self.setupVC()
-            case .failure(let error):
-                print(error)
-            }
-        }
     }
     
     private func setupVC() {
@@ -59,7 +46,32 @@ class DrinkDescriprionViewController: UIViewController {
                 self.drinkImage.image = UIImage(data: imageData)
                 self.indicatorView.stopAnimating()
             }
-            
+        }
+    }
+    
+    // MARK: - Network Manager Methods
+    
+    public func fetchDataWithURLSession() {
+        NetworkManager.shared.fetchData(for: CocktailData.self, from: descriptionURL) { result in
+            switch result {
+            case .success(let drink):
+                self.drink = drink.drinks?.first
+                self.setupVC()
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
+    public func fetchDataWithAlamofire() {
+        AlamofireNetworkManager.shared.fetchData(type: CocktailData.self, with: descriptionURL) { result in
+            switch result {
+            case .success(let drink):
+                self.drink = drink.drinks?.first
+                self.setupVC()
+            case .failure(let error):
+                print(error)
+            }
         }
     }
 }

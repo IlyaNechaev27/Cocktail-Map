@@ -69,7 +69,7 @@ class AlamofireNetworkManager {
                 case .failure:
                     completion(.failure(.decodingError))
                 }
-        }
+            }
     }
 }
 
