@@ -20,6 +20,7 @@
 		BDD2A62F27D91EB70020F699 /* CocktailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD2A62E27D91EB70020F699 /* CocktailData.swift */; };
 		BDD2A63127D91FCA0020F699 /* AlcoholCocktailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD2A63027D91FCA0020F699 /* AlcoholCocktailsTableViewController.swift */; };
 		BDD2A63327D9258B0020F699 /* CocktailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD2A63227D9258B0020F699 /* CocktailTableViewCell.swift */; };
+		BDF9C4F627E4EC8200D391EF /* CocktailImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF9C4F527E4EC8200D391EF /* CocktailImageView.swift */; };
 		F30DBC0BA80B9885CB89620B /* Pods_Cocktail_Map.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E670C0E2CB76CCFFF88A5307 /* Pods_Cocktail_Map.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		BDD2A62E27D91EB70020F699 /* CocktailData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailData.swift; sourceTree = "<group>"; };
 		BDD2A63027D91FCA0020F699 /* AlcoholCocktailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoholCocktailsTableViewController.swift; sourceTree = "<group>"; };
 		BDD2A63227D9258B0020F699 /* CocktailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailTableViewCell.swift; sourceTree = "<group>"; };
+		BDF9C4F527E4EC8200D391EF /* CocktailImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailImageView.swift; sourceTree = "<group>"; };
 		DCF8EE76DE7E12A2BAE6829B /* Pods-Cocktail Map.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cocktail Map.release.xcconfig"; path = "Target Support Files/Pods-Cocktail Map/Pods-Cocktail Map.release.xcconfig"; sourceTree = "<group>"; };
 		E670C0E2CB76CCFFF88A5307 /* Pods_Cocktail_Map.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cocktail_Map.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				BDD2A62E27D91EB70020F699 /* CocktailData.swift */,
+				BDF9C4F527E4EC8200D391EF /* CocktailImageView.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				BD0AA43E27DFD05A00B0A1CA /* CocktailCollectionViewCell.swift in Sources */,
 				BDD2A61927D91CE10020F699 /* AppDelegate.swift in Sources */,
 				BDD2A62F27D91EB70020F699 /* CocktailData.swift in Sources */,
+				BDF9C4F627E4EC8200D391EF /* CocktailImageView.swift in Sources */,
 				BDD2A61B27D91CE20020F699 /* SceneDelegate.swift in Sources */,
 				BDD2A63327D9258B0020F699 /* CocktailTableViewCell.swift in Sources */,
 				BD7094E327E0F7D400C0B381 /* IngredientsViewController.swift in Sources */,

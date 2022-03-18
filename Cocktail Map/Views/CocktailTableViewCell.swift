@@ -9,7 +9,7 @@ import UIKit
 
 class CocktailTableViewCell: UITableViewCell {
  
-    @IBOutlet weak var cocktailImage: UIImageView! {
+    @IBOutlet weak var cocktailImage: CocktailImageView! {
         didSet {
             cocktailImage.contentMode = .scaleAspectFit
             cocktailImage.layer.cornerRadius = cocktailImage.frame.height / 2
@@ -28,14 +28,7 @@ class CocktailTableViewCell: UITableViewCell {
 
     func configure(with cocktail: Drink) {
         cocktailNameLabel.text = cocktail.strDrink
-        
-        DispatchQueue.global().async {
-            guard let imageData = NetworkManager.shared.fetchImage(with: cocktail.strDrinkThumb) else { return }
-            
-            DispatchQueue.main.async {
-                self.cocktailImage.image = UIImage(data: imageData)
-                self.activityIndicator.stopAnimating()
-            }
-        }
+        cocktailImage.fetchImage(with: cocktail.strDrinkThumb ?? "")
+        activityIndicator.stopAnimating()
     }
 }
